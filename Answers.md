@@ -43,7 +43,7 @@ Summarising from the exploratory analysis, there were also insights that the tar
 I did not manage to get into the top 100 but it was close and would likely be possible if I had more time (and daily tries on kaggle) to test out other models such as XGBoost or to further finetune the LightGBM model with RandomizedSearchCV. I would also have liked to try ensembling different models together, however, that might affect the interpretability. 
 
 Scores
--Private: 0.86619 (Rank 166 if competition was still open), just 0.00104 less than 100th place
--Public: 0.86034
+- Private: 0.86619 (Rank 166 if competition was still open), just 0.00104 less than 100th place
+- Public: 0.86034
 
  
