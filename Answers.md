@@ -6,6 +6,8 @@
 4.	To evaluate the model, I fit the best model from step 3 onto the validation dataset and obtained the ROC AUC score to evaluate the performance. This metric was used as it was the evaluation metric for the Kaggle competition. 
 
 
+
+
 ### What is AUC? Why do you think AUC was used as the evaluation metric for such a problem? What are other metrics that you think would also be suitable for this competition?
 
 AUC refers to the Area under the Curve, usually used as the AUC ROC (Receiving Operator Characteristics) curve.  The AUC measures how well the model can distinguish between the classes - the higher the AUC, the better the model is. The ROC is plotted with the true positive rate against the false positive rate of the model at all classification thresholds, which is suitable for this problem where the probabilities are calculated and used for assessment.  
@@ -14,23 +16,27 @@ Another AUC method using the Precision-Recall AUC (PRAUC) curve might actually b
 
 F1-Score might also be appropriate for this competition since it balances the precision and recall, which would be a good middle ground for banks that want to deny loans to those that are likely to default but do not want to accidentally exclude some individuals who might also be capable of paying the loans.
 
+
+
 ### What insight(s) do you have from your model? What is your preliminary analysis of the given dataset?
 
 Based on the final model and the rest of the models and their respective feature importances, the target variable, SeriousDlqin2yrs (i.e. Person experienced 90 days past due delinquency or worse), is highly related to:
-a)	The age of the individual and their past records of making late mayments
-b)	The RevolvingUtilizationOfUnsecuredLines, which is the total balance on credit cards and personal lines of credit divided by the sum of credit limits
+- The age of the individual and their past records of making late mayments
+- The RevolvingUtilizationOfUnsecuredLines, which is the total balance on credit cards and personal lines of credit divided by the sum of credit limits
 
 These indicators are generally indicative of the individual’s spending, debt and payment habits
 
 At the same time, the variables that are less related to the target variable are:
-a)	No. of dependents the individual has
-b)	No. of real estate loans or lines. This is might be because it was specific to real estate and the median and 75th percentile were 1 and 2 loans respectively, thus it might not be a very distinguishable feature 
+-	No. of dependents the individual has
+-	No. of real estate loans or lines. This is might be because it was specific to real estate and the median and 75th percentile were 1 and 2 loans respectively, thus it might not be a very distinguishable feature 
 
 Summarising from the exploratory analysis, there were also insights that the target variable was related to:
-a)	Age. The 25th to 75th percentile of positive cases were from individuals that were slightly younger, around the ages of 35-55, as compared to negative cases at around 40-65 years old. This is similar to the insight obtained above from the model.
-b)	Track record of multiple late payments, with positive cases more likely to have made multiple late payments
-c)	MonthlyIncome. Positive cases had slightly lower monthly income. This was actually the 3rd ranked important feature from the model as well.
-d)	Revolving utilisation of unsecured loans, similar to the insights obtained above from the model
+-	Age. The 25th to 75th percentile of positive cases were from individuals that were slightly younger, around the ages of 35-55, as compared to negative cases at around 40-65 years old. This is similar to the insight obtained above from the model.
+-	Track record of multiple late payments, with positive cases more likely to have made multiple late payments
+-	MonthlyIncome. Positive cases had slightly lower monthly income. This was actually the 3rd ranked important feature from the model as well.
+-	Revolving utilisation of unsecured loans, similar to the insights obtained above from the model
+
+
 
 ### Can you get into the top 100 of the private leaderboard, or even higher?
 
