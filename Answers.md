@@ -21,7 +21,8 @@ F1-Score might also be appropriate for this competition since it balances the pr
 ### What insight(s) do you have from your model? What is your preliminary analysis of the given dataset?
 
 Based on the final model and the rest of the models and their respective feature importances, the target variable, SeriousDlqin2yrs (i.e. Person experienced 90 days past due delinquency or worse), is highly related to:
-- The age of the individual and their past records of making late mayments
+- The age of the individual 
+- Their past records of making late payments
 - The RevolvingUtilizationOfUnsecuredLines, which is the total balance on credit cards and personal lines of credit divided by the sum of credit limits
 
 These indicators are generally indicative of the individual’s spending, debt and payment habits
